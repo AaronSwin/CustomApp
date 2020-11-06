@@ -14,7 +14,12 @@ object inventory {
     }
     fun addToBalance(float: Float)
     {
-        cBalance.add(cBalance.last() + float)
+        if(moneyInvested.isNotEmpty()){
+            cBalance.add(cBalance.last() + float)
+        }else{
+            cBalance.add(float)
+        }
+
     }
     fun addInvested(float: Float)
     {
